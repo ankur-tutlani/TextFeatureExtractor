@@ -1,5 +1,6 @@
-Pass input dataset in CSV file with header of 'Text'
-dataset1 <- maml.mapInputPort(1) # class: data.frame
+#Pass input dataset in CSV file with header of 'Text'
+### dataset1 is input dataframe
+#dataset1 <- maml.mapInputPort(1) # class: data.frame
 EMOT<<-read.csv('src/emot_dic.csv',header=FALSE,stringsAsFactors=FALSE)$V1
 DIC<<-read.csv('src/dic.csv',header=FALSE,stringsAsFactors=FALSE)$V1
 PATH.BING<<-"src/opinion-lexicon-English.RAR"
@@ -230,4 +231,5 @@ feature.matrix<-cbind(text_to_ablation_features(text),text_to_indicator_features
 rownames(feature.matrix)<-NULL
 feature.matrix[!is.finite(feature.matrix)]<-0
 feature.matrix<-as.data.frame(feature.matrix)
-maml.mapOutputPort("feature.matrix");
+#maml.mapOutputPort("feature.matrix");
+# Output is feature.matrix object
