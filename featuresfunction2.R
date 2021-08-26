@@ -138,7 +138,7 @@ text_to_ngram_features_scoring<-function(text,n=N){
     return(mat)
 }
 text<-dataset1$Text    
-feature.matrix<-cbind(text_to_ablation_features(text),text_to_lexical_diversity_features(text),text_to_misogyny(text),text_to_chunked_features(text),text_to_ngram_features_scoring(text))
+feature.matrix<-cbind(text_to_ablation_features(text),text_to_lexical_diversity_features(text),text_to_chunked_features(text),text_to_ngram_features_scoring(text))
 rownames(feature.matrix)<-NULL   
 feature.matrix[!is.finite(feature.matrix)]<-0
 feature.matrix1<-cbind(dataset2,feature.matrix)
