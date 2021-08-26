@@ -1,4 +1,4 @@
-# Pass input dataset in CSV file with header of 'Text'
+Pass input dataset in CSV file with header of 'Text'
 dataset1 <- maml.mapInputPort(1) # class: data.frame
 EMOT<<-read.csv('src/emot_dic.csv',header=FALSE,stringsAsFactors=FALSE)$V1
 DIC<<-read.csv('src/dic.csv',header=FALSE,stringsAsFactors=FALSE)$V1
