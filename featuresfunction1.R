@@ -1,6 +1,9 @@
 #Pass input dataset in CSV file with header of 'Text'
 ### dataset1 is input dataframe
 #dataset1 <- maml.mapInputPort(1) # class: data.frame
+# Below objects are required to use some of the functions below in the file.
+# below csv files are being available over the web.
+
 EMOT<<-read.csv('src/emot_dic.csv',header=FALSE,stringsAsFactors=FALSE)$V1
 DIC<<-read.csv('src/dic.csv',header=FALSE,stringsAsFactors=FALSE)$V1
 PATH.BING<<-"src/opinion-lexicon-English.RAR"
