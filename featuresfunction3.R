@@ -1,4 +1,5 @@
 #Pass input dataset in CSV file with header of 'Text'
+# dataset1 is input dataframe, dataset2 is the output from featuresfunction2.R script.
 #dataset1 <- maml.mapInputPort(1) # class: data.frame
 #dataset2 <- maml.mapInputPort(2) # class: data.frame
 ## below csv,text and zip files are available on the web.
