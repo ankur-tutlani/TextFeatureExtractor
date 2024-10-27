@@ -122,7 +122,7 @@ text_to_token_features<-function(text,emot=EMOT){
     rownames(token_features)<-NULL
     return(token_features)
 }
-text_to_ablation_features<-function(text){
+text_to_differential_features<-function(text){
     feature_i_c<-text_to_character_features(text)
     feature_i_t<-text_to_token_features(text)
     if(length(text)>1) {
