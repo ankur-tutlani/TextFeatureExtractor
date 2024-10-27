@@ -230,7 +230,7 @@ text_to_chunked_features<-function(text){
     return(cht_all)
 }
 text<-dataset1$Text
-feature.matrix<-cbind(text_to_ablation_features(text),text_to_indicator_features(text),text_to_sentiment_features(text),text_to_chunked_features(text))
+feature.matrix<-cbind(text_to_differential_features(text),text_to_indicator_features(text),text_to_sentiment_features(text),text_to_chunked_features(text))
 rownames(feature.matrix)<-NULL
 feature.matrix[!is.finite(feature.matrix)]<-0
 feature.matrix<-as.data.frame(feature.matrix)
