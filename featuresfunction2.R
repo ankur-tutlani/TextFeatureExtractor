@@ -38,7 +38,7 @@ text_to_transformed_text<-function(text,dic=DIC){
     colnames(transformed.text)<-c('compressed text','chunked text')
     return(transformed.text)
 }
-text_to_ablation_features<-function(text){
+text_to_differential_features<-function(text){
     feature_i_read<-text_to_readability_features(text)
     if(length(text)>1){
     feature_o_read<-text_to_readability_features(paste(text[1:length(text)],collapse=" "))
@@ -138,7 +138,7 @@ text_to_ngram_features_scoring<-function(text,n=N){
     return(mat)
 }
 text<-dataset1$Text    
-feature.matrix<-cbind(text_to_ablation_features(text),text_to_lexical_diversity_features(text),text_to_chunked_features(text),text_to_ngram_features_scoring(text))
+feature.matrix<-cbind(text_to_differential_features(text),text_to_lexical_diversity_features(text),text_to_chunked_features(text),text_to_ngram_features_scoring(text))
 rownames(feature.matrix)<-NULL   
 feature.matrix[!is.finite(feature.matrix)]<-0
 feature.matrix1<-cbind(dataset2,feature.matrix)
