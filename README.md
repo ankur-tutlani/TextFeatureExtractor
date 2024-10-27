@@ -2,6 +2,8 @@
 This repository contains R code for extracting a variety of text features, including character-based, token-based, sentiment, readability, lexical diversity, and more. These functions leverage libraries like NLP, openNLP, tm, and SnowballC to preprocess text and generate insightful features for further analysis.
 
 ## Functions
+Below is a brief description of various functions available in this repository.
+
 1. text_to_character_features: Extracts various character-based features from input text, such as the number of whitespaces, text length (excluding whitespaces), numeric, alphabetic, and non-alphanumeric characters.
 2. text_to_token_features: Extracts various token-based features from input text, including counts of different types of tokens such as alphabetic, numeric, non-alphanumeric, and tokens of various lengths and cases.
 3. text_to_differential_features: Generates differential features from input text by calculating character and token-based features, and then comparing them with features from the concatenated text to identify differences.
