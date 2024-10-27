@@ -1,5 +1,5 @@
 ## Description
-This repository contains R code for generating features from raw text, including sentiment analysis, lexical diversity, and text preprocessing. The scripts leverage various libraries and datasets to enhance text analysis capabilities.
+This repository contains R code for extracting a variety of text features, including character-based, token-based, sentiment, readability, lexical diversity, and more. These functions leverage libraries like NLP, openNLP, tm, and SnowballC to preprocess text and generate insightful features for further analysis.
 
 ## Functions
 1. text_to_character_features: Extracts various character-based features from input text, such as the number of whitespaces, text length (excluding whitespaces), numeric, alphabetic, and non-alphanumeric characters.
